@@ -9,7 +9,7 @@ export const Form = ({ buttonTitle, callback, placeholder }) => {
         const millas = value
         e.preventDefault()
         callback(millas)
-        e.target.reset()
+        onChange('')
     }
     return (
         <StyledForm
@@ -21,6 +21,7 @@ export const Form = ({ buttonTitle, callback, placeholder }) => {
                 onChange={e => {
                     onChange(e.target.value)
                 }}
+                value={value}
             >
             </input>
             <button disabled={!value}>
