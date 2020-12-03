@@ -1,11 +1,13 @@
 import React from 'react'
 import { useInputValue } from '../../hooks/useInputValue'
+import { Subtitle } from './styles'
 import { Form } from '../Form'
 
 export const Convertion = () => {
-    const { value, onChange } = useInputValue('0 mi = 0 km')
+    const { value, onChange } = useInputValue('')
+
     const convert = (millas) => {
-        onChange(`${millas} mi = ${parseInt(millas) * 1.60934} km`)
+        onChange(millas)
     }
     return (
         <>
@@ -14,9 +16,9 @@ export const Convertion = () => {
                 callback={convert}
                 placeholder='Ingrese la cantidad de Millas'
             />
-            <h2>
-                {value}
-            </h2>
+            <Subtitle>
+                {value} mi = {parseInt(value) * 1.60934} km
+            </Subtitle>
         </>
     )
 }
