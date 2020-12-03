@@ -1,19 +1,25 @@
 import React, { Fragment } from 'react'
 import { Helmet } from 'react-helmet'
 import { Div, Title, Subtitle } from './styles'
+import Grid from 'styled-components-grid';
 
 export const Layout = ({ children, title, subtitle }) => {
   return (
     <Fragment>
       <Helmet>
-        {title && <title>{title} | Template </title>}
+        {title && <title>{title} | ITM </title>}
         {subtitle && <meta name='description' content={subtitle} /> }
       </Helmet>
-      <Div>
-        {title && <Title>{title}</Title>}
-        {subtitle && <Subtitle>{subtitle}</Subtitle>}
-        {children}
-      </Div>
+      <Grid>
+        <Grid.Unit size={1 / 2}></Grid.Unit>
+        <Grid.Unit size={1 / 2}>
+          <Div>
+            {title && <Title>{title}</Title>}
+            {subtitle && <Subtitle>{subtitle}</Subtitle>}
+            {children}
+          </Div>
+        </Grid.Unit>
+      </Grid>
     </Fragment>
   )
 }

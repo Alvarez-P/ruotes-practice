@@ -1,10 +1,11 @@
 import React from 'react'
 import { Layout } from '../components/Layout'
 
-export const Home = () => (
+export const Registro = () => (
       <Layout 
-        title='Inicio' 
+        title='Registro' 
         subtitle='Programación Web'>
       </Layout>
     )
 
+export default Registro
