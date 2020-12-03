@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link as LinkRouter } from '@reach/router'
 
 export const Nav = styled.nav`
-  background: #2a21ac;
+  background: #007acb;
   overflow: hidden;
 `
 export const Link = styled(LinkRouter)`
@@ -10,12 +10,12 @@ export const Link = styled(LinkRouter)`
   display: block;
   color: #fff;
   text-align: center;
-  padding: 14px 16px;
+  padding: 13px 14px;
   text-decoration: none;
   &[aria-current] {
     border-bottom: 4px solid #fff;
   }
   &:hover {
-    background: #241e85;
+    border-bottom: 4px solid #0061a0;
   }
 `
