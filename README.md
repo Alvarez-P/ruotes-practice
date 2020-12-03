@@ -1,6 +1,6 @@
-# React Template
+# React Application - Routes practice
 
-One Paragraph of project description goes here. This is a template for organization repositories, set your own stuff.
+React Application - Routes practice with Reach-Router.
 
 ## Getting Started :arrow_forward:
 
