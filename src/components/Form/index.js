@@ -8,7 +8,8 @@ export const Form = ({ buttonTitle, callback, placeholder }) => {
   const onSubmit = e => {
     e.preventDefault()
     callback(value)
-    onChange('')
+    e.target.value = ''
+    onChange(e)
   }
 
   return (
@@ -17,9 +18,7 @@ export const Form = ({ buttonTitle, callback, placeholder }) => {
         id='inputValue'
         type='text'
         placeholder={placeholder}
-        onChange={e => {
-          onChange(e.target.value)
-        }}
+        onChange={onChange}
         value={value}
       />
       <Button disabled={!value}>
