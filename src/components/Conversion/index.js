@@ -3,14 +3,14 @@ import { Subtitle } from './styles'
 import { Form } from '../Form'
 
 export const Convertion = () => {
-  const convertionSaved = localStorage.getItem('convertion') || 0
-  const [miles, setMiles] = useState(convertionSaved)
+  const convertionSaved = localStorage.getItem('convertion') || ''
+  const [result, setResult] = useState(convertionSaved)
     
   useEffect(() => {
-      localStorage.setItem('convertion', miles)
-  }, [miles])
+      localStorage.setItem('convertion', result)
+  }, [result])
 
-  const onChange = mi => setMiles(mi)
+  const onChange = miles => setResult(`${miles} mi = ${parseFloat(miles) * 1.60934} km`)
 
   return (
     <>
@@ -20,7 +20,7 @@ export const Convertion = () => {
         placeholder='Ingrese la cantidad de Millas'
       />
       <Subtitle>
-        {miles} mi = {parseInt(miles) * 1.60934} km
+        {result}
       </Subtitle>
     </>
   )
