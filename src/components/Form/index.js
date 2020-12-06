@@ -8,14 +8,13 @@ export const Form = ({ buttonTitle, callback, placeholder }) => {
   const onSubmit = e => {
     e.preventDefault()
     callback(value)
-    e.target.value = ''
-    onChange(e)
+    onChange('')
   }
 
   return (
     <StyledForm onSubmit={onSubmit}>
       <Input
-        id='inputValue'
+        id='input'
         type='text'
         placeholder={placeholder}
         onChange={onChange}
